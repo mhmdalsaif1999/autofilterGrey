@@ -30,6 +30,8 @@ auth_channel = environ.get('AUTH_CHANNEL', '')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('AUTH_CHANNEL', 'https://t.me/+83woucFZ9Ec4MWU1').split()]
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
+reqst_channel = environ.get('REQST_CHANNEL_ID')
+REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "")
