@@ -6,6 +6,7 @@ import asyncio
 from pyrogram.types import Message, InlineKeyboardButton
 from pyrogram import enums
 from typing import Union
+from database.fsub_db import Fsub_DB
 import re
 import os
 from datetime import datetime
@@ -41,6 +42,15 @@ class temp(object):
     SETTINGS = {}
 
 async def is_subscribed(bot, query):
+    if not AUTH_CHANNEL:
+        return True
+    else:
+        pass
+    user = await Fsub_DB().get_user(int(query.from_user.id))
+    if user:
+        return True
+    else:
+        pass
     try:
         user = await bot.get_chat_member(AUTH_CHANNEL, query.from_user.id)
     except UserNotParticipant:
@@ -50,7 +60,6 @@ async def is_subscribed(bot, query):
     else:
         if user.status != 'kicked':
             return True
-
     return False
 
 async def get_poster(query, bulk=False, id=False, file=None):
