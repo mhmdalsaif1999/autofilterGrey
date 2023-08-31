@@ -3,7 +3,7 @@ import logging
 import random
 import asyncio
 from Script import script
-from fsub import Force_Sub
+from .fsub import Force_Sub
 from pyrogram import Client, filters, enums
 from pyrogram.errors import ChatAdminRequired, FloodWait
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
