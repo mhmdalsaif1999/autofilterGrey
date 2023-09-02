@@ -722,7 +722,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>🎥 Requested Movie Name : {search} </b>\n\n\n<b>⚠️ Note : If the move you are looking for is not available. Then leave a message admin id below </b> \n\n<b>👤 Contact Admin : @TeamMas_Admin_Bot</b>\n\n<a href=https://t.me/tutorial_Teammas/6><b>CLICK TO WATCH . HOW TO USE IT</b></a>"
+        cap = f"<b>🎥 Requested Movie Name : {search} </b>\n\n\n<b>⚠️ Note : If the move you are looking for is not available. Then leave a message admin id below </b> \n\n<b>👤 Contact Admin : @TeamMas_Admin_Bot</b>"
     if imdb and imdb.get('poster'):
         try:
             hehe =  await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
