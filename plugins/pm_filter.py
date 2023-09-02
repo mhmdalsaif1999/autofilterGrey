@@ -722,7 +722,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>🎥 Requested Movie Name : {search} </b>\n\n\n<b>⚠️ Note : If the movie you are looking for is not available. Then leave a message admin id below </b> \n\n<b>👤 Admin : @TeamMas_Admin_Bot</b>"
+        cap = f"<b>🎥 Requested Movie Name : {search} </b>\n\n\n<b>⚠️ Note : If the movie you are looking for is not available. Then leave a message admin id below </b> \n\n<b>👤 Admin : @TeamMas_Admin_Bot</b>\n\n<i> ℹ️ Don't ask PreDvd (Theatre Quality) Prints</i>"
     if imdb and imdb.get('poster'):
         try:
             hehe =  await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
