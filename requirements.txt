@@ -1,6 +1,5 @@
 git+https://github.com/Joelkb/cinemagoer
-pyrofork 
-pyrogram 
+pyrofork==2.3.45
 imdbpy==2022.7.9
 tgcrypto
 pymongo[srv]==3.12.3
